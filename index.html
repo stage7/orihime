@@ -7,6 +7,20 @@
       body {
         background: #222;
       }
+      .canvasContainer{
+        position:relative;
+      }
+      canvas {
+        position:relative;
+      }
+      .pixel {
+        background:url('pixel.png') repeat;
+        width:480px;
+        height:432px;
+        position:absolute;
+        top:0;
+        left:0;
+      }
       
     </style>
   </head>
@@ -17,8 +31,11 @@
       <li>Initial test</li>
     </ul>
     
-    <canvas id="demo" width="160" height="144"></canvas>
-    <canvas id="demogb3x" width="480" height="432"></canvas>
+    <div class="canvasContainer">
+      <canvas id="demo" width="480" height="432"></canvas>
+      <div class="pixel"></div>
+    </div>
+    <!--<canvas id="demogb3x" width="480" height="432"></canvas>-->
     
     <script src="orihime-core.js"></script>
     <script src="orihime-assets.js"></script>
