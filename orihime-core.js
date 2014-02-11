@@ -5,8 +5,8 @@ ctx.webkitImageSmoothingEnabled = false;
 ctx.mozImageSmoothingEnabled = false;
 ctx.fillStyle="#ffff00";
 ctx.fillRect(0,0,480,432);
-ctx.transform(3,0,0,3,0,0);
-//ctx.scale(3,3);
+//ctx.transform(3,0,0,3,0,0);
+ctx.scale(3,3);
 //var c2 = document.getElementById("demogb3x");
 //	var ctx2 = c2.getContext("2d");
 
@@ -28,9 +28,9 @@ function animate(canvas, context, startTime) {
 	var linearSpeed = 25;
 	// pixels / second
 	if(time<3000)
-		var newX = linearSpeed * time / 1000;
+		var newX = Math.round(linearSpeed * time / 1000);
 	else
-		var newX = linearSpeed * 3;
+		var newX = Math.round(linearSpeed * 3);
 
 	// clear
 	context.clearRect(0, 0, canvas.width, canvas.height);
@@ -44,7 +44,7 @@ function animate(canvas, context, startTime) {
 			var color = getColorFromArray(nitoriArray, j*nitoriArray[0] + i + 2);
 			if (color) {
 				ctx.fillStyle = String(getColorFromArray(nitoriArray, j*nitoriArray[0] + i + 2));
-				ctx.fillRect(newX+i+0.5, 2+j+0.5, 1, 1);
+				ctx.fillRect(newX+i, 2+j, 1, 1);
 			}
 		}
 	}
