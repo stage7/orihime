@@ -79,13 +79,13 @@ function getColorFromArray(array, pixel){
 	var pixelValue = array[pixel];
 	switch (pixelValue){
 		case 0:
-			return "#5F5F00";
+			return "#4B4B00";
 			break;
 		case 1:
-			return "#949400";
+			return "#878700";
 			break;
 		case 2:
-			return "#CACA00";
+			return "#C3C300";
 			break;
 		case 3:
 			return "#FFFF00";
