@@ -12,6 +12,10 @@
       }
       canvas {
         position:relative;
+        background:#ffff00;
+      }
+      #threeCanvas {
+        display:none;
       }
       .pixel {
         background:url('pixel.png') repeat;
@@ -37,15 +41,18 @@
     </ul>
     <p>v0.1.1:
     <ul>
-      <li>Darken and lighten effects</li>
+      <li>Darken and lighten effects (instant, progressive from/to black/white)</li>
     </ul>
     
+    <canvas id="threeCanvas"></canvas>
     <div class="canvasContainer">
       <canvas id="demo" width="480" height="432"></canvas>
       <div class="pixel"></div>
     </div>
     <!--<canvas id="demogb3x" width="480" height="432"></canvas>-->
     
+    <script src="three.min.js"></script>
+    <script src="orihime-three-wrapper.js"></script>
     <script src="orihime-postprocessing.js"></script>
     <script src="orihime-assets.js"></script>
     <script src="orihime-core.js"></script>

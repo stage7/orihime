@@ -6,6 +6,7 @@ ctx.mozImageSmoothingEnabled = false;
 ctx.fillStyle="#ffff00";
 ctx.fillRect(0,0,480,432);
 ctx.scale(3,3);
+orihimeCube.draw();
 
 function animate(canvas, context, startTime) {
 	// clear
@@ -21,9 +22,10 @@ function animate(canvas, context, startTime) {
 	else
 		var newX = Math.round(linearSpeed * 3);
 
-	ctx.fillStyle="#ffff00";
-	ctx.fillRect(0,0,480,432);
-
+	/*ctx.fillStyle="#ffff00";
+	ctx.fillRect(0,0,480,432);*/
+	ctx.drawImage(base64CubeImg, 0, 0);
+	
 	for(var j = 0; j < nitoriArray[1]; j++){
 		for(var i = 0; i < nitoriArray[0]; i++){
 			var color = getColorFromArray(nitoriArray, j*nitoriArray[0] + i + 2);
